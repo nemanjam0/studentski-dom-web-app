@@ -1,0 +1,36 @@
+ctrl+d multiple select
+//nekad//mozes nekad da izbacis dorm_tenant zato sto je bespotrebna kolona
+//dodaj middleware za role admin prilikom kreiranja dormworkera i ostalih stvari
+//dodaj SUCCESS kada se izbrise stvar ili kada se nesto izmeni ili kada se nesto doda iz baze(kada se preko DELETE buttona nesto izbrise)
+napravi softdelete umesto delete i omoguci recover opciju tipa ako izbrisu nesto greskom onda ima stranica sa izbrisanim stvarima i odatle mogu da vrate kao Recycle bin
+//Dodaj breakagecontroller access control
+//napravi users index i da odatle moze da se vidi temp_pass ako postoji
+//dodaj broj zaduzenih stvari u dashboard
+//dodaj proveru prilikom update i store da li korisnik ima permisiju
+//umesto sto pravis 10 querya za dormworker bolje napravi isWorkerWorkInDorm metod u modelu
+//ipak ostaje mail,Kada napravis kolonu username u users zameni email u username u DormStudents.store i DormStudents.update
+//OvernightStay testiraj validaciju da li je student potrosio sve dane u mesecu
+//???OvernigtStay.store dodaj uslov da ucitava samo prenocista za SELEKTOVANOG KORISNIKA
+//moze da vidi u listi korisnika koji nisu promenili//napravi da prilikom kreiranja naloga korisnicima admin moze da vidi temp passworde
+//dodaj prilikom edita sobe proveru da li ce u slucaju smanjivanja mesta u sobi moci svi studenti koji su vec u sobi da stanu
+//zavrsi rooms.edit ubaci da moze da izbaci studenta iz sobe odatle
+////novo
+kada korisnik menja sifru ubaci proveru da li pokusava da stavi datum rodjenja kao sifru,posto je prilikom kreiranja naloga to sifra pa bi bilo lako da je neko provali
+//ispravi dorm tanant u tenant students/index
+//proveri da li usermodel/workPlaces uopste radi
+//students item dodaj polje za unos username i kada se otvori prikaz dodaj opciju da odatle moze da pozajmi/vrati
+prilkiom brisanja studentskog naloga ili iseljavanja studenta iz doma ubaciti proveru da li je vratio sve stvari koje je pozajmio
+//U dashboard controller napravi verifikaciju kad se posalje username da nadje korisnikov id i onda salje drugom kontroleru npr. BorrowedItems/Create
+izbaci resourcecontroller za loaned items posto realno sluzi samo za index za sve ostalo je posebna ruta
+//dodaj u tabeli sa tipovima kartice cene dorucka,rucka i vecere
+// kada ugasis debug u .env scopes middleware radi lepo(ne prikazuje sve one greske) nego samo msg da token nema odredjeni scope i stavlja status code na 403
+//dodaj dropdown za roles i dodaj role cafeteria_worker i atm(zato sto necemo da pravimo posebnu tabelu za atm nego ce kesomati biti u tabelu sa korisnicma i imati role "atm")
+Prouci da li da dodas index na created_at u tabeli sa transakcijama https://stackoverflow.com/questions/9087767/creating-an-index-on-a-timestamp-to-optimize-query
+//Napravi view-ove za student_cards
+//nema,Nadji zasto mysql preskace primary key za jedan u user_bills prilikom svakom inserta
+//??Ispravi category posto room moze da overrideuje
+//posto je index nije htelo,Prilikom kreiranja sobe stavi da se kategorija setuje na NULL,a ne na 0
+//dodaj renewed/issued at kolonu u student cards i napravi proveru da li je kartica istekla,provera da li je kartica istekla pre kupovine/skidanja obroka/placanja
+//student added to a dorm redirect prebaci na dashboard 
+//ZAVRSI PROVERU ZA ISTEKLU KARTICU
+testiraj cefeteria worker i atm role u c# app
